@@ -1,12 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>ToDo</title>
+  <title><%= yield(:title) %></title>
+  <link href=''>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <link href='http://fonts.googleapis.com/css?family=Amatic+SC' rel='stylesheet' type='text/css'>
 </head>
 <body>
+
+  <div class='nav'>
+    <div class='container'>
+      <ul>
+        <li><a href='/lists'>Home</a></li>
+        <li><a href='/lists/new'>Add List</a></li>
+      </ul>
+    </div>
+  </div>
+
+<%= flash[:alert] %>
+<%= flash[:notice] %>
 
 <%= yield %>
 

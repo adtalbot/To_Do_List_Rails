@@ -1,7 +1,14 @@
-<h1>Lists</h1>
+<% content_for(:title, 'Edit List | To Do') %>
 
-<ul>
-  <% @lists.each do |list| %>
-    <li><%= link_to list.name, list_path(list) %></li>
-    <% end %>
-</ul>
+<div class='jumbotron'>
+  <div class='container'>
+    <h1>Your Lists</h1>
+    <p>Your place to keep track of your lists</p>
+
+    <ul>
+      <% @lists.each do |list| %>
+        <li><%= link_to list.name, list_path(list) %></li>
+        <% end %>
+    </ul>
+  </div>
+</div>
